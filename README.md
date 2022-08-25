@@ -46,6 +46,9 @@ Before you deploy these webhooks for the first time, [create an S3 bucket](https
 
 <details><summary><strong>3. Connecting to Incident.io</strong></summary>
 
+- [Go to Incident.io's dashboard](https://app.incident.io/login) and click **API Keys → + Add new**
+- Copy the key that appears as a GitHub Secret named `INCIDENTIO_API_KEY`
+- Add this as `TAILSCALE_API_KEY` as a GitHub Secret.
 - Optional: Add the number of hours you want users to retain access for under `AUTO_APPROVAL_DURATION` as a GitHub Secret.
 - Optional: Select which role assignments receiving auto approval by setting `AUTO_APPROVAL_INCIDENTIO_ROLES` as a GitHub Secret.
 
