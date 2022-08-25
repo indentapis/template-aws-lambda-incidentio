@@ -41,6 +41,7 @@ jobs:
         continue-on-error: true
         env:
           TF_VAR_indent_webhook_secret: ${{ secrets.INDENT_WEBHOOK_SECRET }}
+          TF_VAR_incidentio_api_key: ${{ secrets.INCIDENTIO_API_KEY }}
           TF_VAR_auto_approval_duration: ${{ secrets.AUTO_APPROVAL_DURATION }}
           TF_VAR_auto_approval_incidentio_roles: ${{ secrets.AUTO_APPROVAL_INCIDENTIO_ROLES }}
       - uses: actions/github-script@0.9.0
@@ -73,6 +74,7 @@ jobs:
         run: terraform apply -input=false -auto-approve
         env:
           TF_VAR_indent_webhook_secret: ${{ secrets.INDENT_WEBHOOK_SECRET }}
+          TF_VAR_incidentio_api_key: ${{ secrets.INCIDENTIO_API_KEY }}
           TF_VAR_auto_approval_duration: ${{ secrets.AUTO_APPROVAL_DURATION }}
           TF_VAR_auto_approval_incidentio_roles: ${{ secrets.AUTO_APPROVAL_INCIDENTIO_ROLES }}
       - name: Terraform Output

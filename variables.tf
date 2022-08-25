@@ -13,6 +13,12 @@ variable "indent_webhook_secret" {
   sensitive = true
 }
 
+variable "incidentio_api_key" {
+  type      = string
+  default   = ""
+  sensitive = true
+}
+
 variable "auto_approval_duration" {
   type      = string
   default   = ""
