@@ -7,13 +7,8 @@ This repository contains an integration between Incident.io and [Indent](https:/
 
 ## Quicklinks
 
-- [Indent Documentation](https://indent.com/docs)
+- [Indent Documentation Index](https://indent.com/docs)
 - [Indent Support](https://support.indent.com)
-
-**In this repo**
-
-- [GitHub Secrets](./settings/secrets/actions)
-- [GitHub Actions](./actions/workflows/deploy.yaml)
 
 ## Configuration
 
@@ -48,7 +43,7 @@ Before you deploy these webhooks for the first time, [create an S3 bucket](https
 
 - [Go to Incident.io's dashboard](https://app.incident.io/login) and click **API Keys → + Add new**
 - Copy the key that appears as a GitHub Secret named `INCIDENTIO_API_KEY`
-- Add this as `TAILSCALE_API_KEY` as a GitHub Secret.
+- Add this as `INCIDENTIO_API_KEY` as a GitHub Secret.
 - Optional: Add the number of hours you want users to retain access for under `AUTO_APPROVAL_DURATION` as a GitHub Secret.
 - Optional: Select which role assignments receiving auto approval by setting `AUTO_APPROVAL_INCIDENTIO_ROLES` as a GitHub Secret.
 
