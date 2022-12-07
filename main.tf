@@ -10,8 +10,8 @@ terraform {
 
 # Indent + Incident.io Integration
 
-# Details: https://github.com/indentapis/integrations/tree/fc629d5c057133dd97e04244485774a57fd10b71/packages/stable/indent-integration-incidentio
-# Last Change: https://github.com/indentapis/integrations/commit/fc629d5c057133dd97e04244485774a57fd10b71
+# Details: https://github.com/indentapis/integrations/tree/1c96c5ecb61ba6fe8f5dd76ef2a2614cc454117c/packages/stable/indent-integration-incidentio
+# Last Change: https://github.com/indentapis/integrations/commit/1c96c5ecb61ba6fe8f5dd76ef2a2614cc454117c
 
 module "idt-incidentio-webhook" {
   source                = "git::https://github.com/indentapis/integrations//terraform/modules/indent_runtime_aws_lambda"
@@ -19,8 +19,8 @@ module "idt-incidentio-webhook" {
   indent_webhook_secret = var.indent_webhook_secret
   artifact = {
     bucket       = "indent-artifacts-us-west-2"
-    function_key = "webhooks/aws/lambda/incidentio-fc629d5c057133dd97e04244485774a57fd10b71-function.zip"
-    deps_key     = "webhooks/aws/lambda/incidentio-fc629d5c057133dd97e04244485774a57fd10b71-deps.zip"
+    function_key = "webhooks/aws/lambda/incidentio-1c96c5ecb61ba6fe8f5dd76ef2a2614cc454117c-function.zip"
+    deps_key     = "webhooks/aws/lambda/incidentio-1c96c5ecb61ba6fe8f5dd76ef2a2614cc454117c-deps.zip"
   }
   env = {
     INCIDENTIO_API_KEY             = var.incidentio_api_key
